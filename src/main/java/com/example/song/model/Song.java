@@ -16,8 +16,9 @@ import javax.persistence.*;
 public class Song{ 
    
    @Id 
-   @GeneratedValue(strategy=GenerationType.IDENTITY)
    @Column(name="songid")
+   @GeneratedValue(strategy=GenerationType.IDENTITY)
+   
     private int songId;
 
     @Column(name="songname")
@@ -58,7 +59,7 @@ public class Song{
     } 
 
     public String getLyricist(){
-        this.lyricist=lyricist;
+        return lyricist;
     }
 
     public void setLyricist(String lyricist){

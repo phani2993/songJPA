@@ -27,7 +27,7 @@ import com.example.song.model.Song;
 
 
 @Service 
-public class SongJpaService implements SongJpaRepository{
+public class SongJpaService implements SongRepository{
 
     
     @Autowired 

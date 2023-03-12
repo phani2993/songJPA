@@ -20,26 +20,26 @@ import java.util.*;
 public class SongController{ 
    
    @Autowired
-    private SongJpaService songJpaService;
+    private SongJpaService songService;
 
 
 
     @GetMapping("/songs")
     public ArrayList<Song> getSongs(){
-        return songJpaService.getSongs();
+        return songService.getSongs();
 
     }
 
 
     @GetMapping("/songs/{songId}")
     public Song getSongById(@PathVariable("songId") int songId){
-        return songJpaService.getSongById(songId);
+        return songService.getSongById(songId);
     }
 
 
     @PostMapping("/songs")
     public Song addSong(@RequestBody Song song){
-        return songJpaService.addSong(song);
+        return songService.addSong(song);
 
     }
 
@@ -47,12 +47,12 @@ public class SongController{
     @PutMapping("/songs/{songId}")
 
     public Song updateSong(@PathVariable("songId") int songId, @RequestBody Song song){
-        return songJpaService.updateSong(songId,song);
+        return songService.updateSong(songId,song);
     }
 
     @DeleteMapping("/songs/{songId}")
     public Song deleteSong(@PathVariable("songId") int songId){
-        songJpaService.deleteSong(songId);
+        songService.deleteSong(songId);
     }
 
 

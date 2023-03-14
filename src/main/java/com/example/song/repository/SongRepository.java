@@ -14,5 +14,5 @@ public interface SongRepository {
 
     Song updateSong(int songId,Song song); 
 
-    Song deleteSong(int songId);
+    void deleteSong(int songId);
 }

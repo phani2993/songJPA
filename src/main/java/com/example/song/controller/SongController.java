@@ -51,7 +51,7 @@ public class SongController{
     }
 
     @DeleteMapping("/songs/{songId}")
-    public Song deleteSong(@PathVariable("songId") int songId){
+    public void deleteSong(@PathVariable("songId") int songId){
         songService.deleteSong(songId);
     }
 
